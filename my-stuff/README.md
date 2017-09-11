@@ -12,12 +12,15 @@ FIXME: description
 ## Installation
 
 * Mac
+    ```
     brew update && brew cask install java
     brew install leiningen
+    ```
 * Windows with git bash
+    ```
     curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-
     ./lein
+    ```
 
 
 
@@ -29,9 +32,13 @@ FIXME: description
 ## Usage
 
 * Terminal environment
+    ```
     lein repl
+    ```
 * create a project
+    ```
     lein new app {APP_NAME} 
+    ```
 
 <!-- 
 FIXME: explanation
@@ -44,35 +51,47 @@ FIXME: listing of options this app accepts.
 
 ## Examples
 * Output to console
+    ```
     (println {ANY VARIABLE OR LITERAL})
+    ```
 
 * String Methods
+    ```
     (.split {STRING TO SPLIT} {WHAT TO SPLIT ON}))
+    ```
     * Returns a vector from a string
 
 * Vector Methods
+    ```
     (map 
         (fn [x] 
             (.toUpperCase x)
         )
     {ORIGINAL VECTOR})
+    ```
 
 * Importing modules
+    ```
     (require '[clojure.repl :refer :all])
+    ```
 
 * Defining functions
     * All of these are equivlent
+        ```
         (defn greet [] println "Hello")
         (def greet (fn [] (println "Hello")))
         (def greet #(println "Hello"))
+        ```
 
 
 * Defining functions with different argument lengths
+    ```
     (defn greeting 
         ([] (str "Hello, World")) 
         ([x] (str "Hello, " x "!")) 
         ([x y] (str x", "y"!"))
     )
+    ```
 
 * Testing 
     (assert (= "Hello, World" (greeting)))
@@ -80,7 +99,9 @@ FIXME: listing of options this app accepts.
 
 * Using java (not javascript)
     * from java.lang.Math
+        ```
         (= -1.0 (Math/cos Math/PI))
+        ```
 
 
 
