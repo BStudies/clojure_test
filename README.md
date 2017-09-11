@@ -74,6 +74,7 @@ This is a simple hello world programm.
 
 ## Loops
 1. while- Do the code given while the condition is true.
+
 2. dotimes -Do the code given n number of times. n being the number supplied 
 
 ;;prints 0..2`
@@ -87,8 +88,8 @@ This is a simple hello world programm.
 ;;3
 ;;4
 (doseq [n [1 2 3 ]] 
-  (println (inc n))
-`
+  (println (inc n))`
+  
 4. loop - similar to a foor loop in other languages
 
 
@@ -133,10 +134,12 @@ This is a simple hello world programm.
 
 `(def a (list 1 2 3 3))
 ;;(1 2 3)`
+
 2.Set - A set stores unique values from a list.
 
 `(set a)
 ;;#{1 2 3 4}`
+
 3.Vectors - similar to arrays in that indexes are contiguous.
 
 `(vector 1 2 3)
@@ -151,4 +154,23 @@ This is a simple hello world programm.
 
 ## Functions and Variables
 
+### How to define a function 
+ A function is defined as follows 
+ 
+ `(defn Hello-world
+ "Some description"
+ [x]
+ (println x))`
+
+The first line is where you name the function. The string that follows is an optional parameter to briefly describe what the fucntion does. if you run `(doc Hello-world)`, the description will be return. this is good for documentation purposs. Next are the paramaters and lastly the code itself that runs when the function is called.
+### Anonymous Functions
+there are also anonymous functions in clojure and can be defined as follows
+`(fn [value] (+ 2 value))`
+
+## How to define a variable
+A variable can be defined as follows
+
+`(def a 10)
+;; the value of a is now 10
+`
 
