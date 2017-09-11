@@ -260,36 +260,202 @@
 ; (assert (= [0 1] (buildMapSumOpposites [3 2 1] {3 1, 2 2, 1 3} 4)))
 
 
+
+
+
+
+; works but I cant figure out how to 
+; break the loop so it returns all indicies
+; it also allows for reuse of the same number
+; also I cant figure out why there is an exception
+; ====================================================
 (defn findPair [myHash sumVal] (
   (def myHashKeys (keys myHash))
   ; (println myHashKeys)
   ; (def opposites [])
-  (def indicies [])
+  (def indicies [{}])
   (doseq [k myHashKeys] 
     (do 
       (def opposite (- sumVal k))
       (println opposite)
-      (if (get myHash opposite) (conj indicies (get myHash k)))
+      (if (get myHash opposite) 
+        ( def indicies (conj indicies {(get myHash opposite) (get myHash k)}))
+      )
     )
   )
+
   (println indicies)
+  (identity indicies)
+
 ))
-(assert (= [0 1] (findPair (buildMap [3 2 1]) 4)))
+; (assert (= [0 1 2 4 5] (findPair (buildMap [3 2 1 14 10 -6]) 4)))
 
 
-; (defn twoSum [vec sumValue] (
-;   (def myHash (buildMap vec))
-;   identity (findPair vec myHash sumValue)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; Different approach to findPair
+; =============================================
+; (defn findPair [myHash sumVal] (
+;   (def myHashKeys (keys myHash))
+;   ; (println myHashKeys)
+;   ; (def opposites [])
+;   (def indicies [])
+  
+;   (println (count myHashKeys))
+;   (loop [j 0]
+;     (do 
+;       (if (>= j (count myHashKeys))
+;         (do
+;           (println "done")
+;           (println "test")
+;         )
+        
+;         (recur 
+;           (do
+;             (println j)
+;             (inc j)
+;           )
+;         )
+;       )
+      
+;     )
+    
+;   ;   (println j)
+    
+;     ; (println (nth myHashKeys j))
+;   ;   ; (do 
+;   ;   ;   (def currentHashKey (get myHashKeys j))
+;   ;   ;   (def currentHashIndex (get myHash currentHashKey))
+;   ;   ;   (def opposite (- sumVal currentHashIndex))
+;   ;   ;   (println opposite)
+;   ;   ;   (if (get myHash opposite) 
+;   ;   ;     (do 
+;   ;   ;       (def indexTwo (get myHash opposite))
+;   ;   ;       ( def indicies (conj indicies currentHashIndex))
+;   ;   ;       ( def indicies (conj indicies indexTwo))
+;   ;   ;     ) 
+;   ;   ;     ; (recur inc j)
+;   ;   ;     (inc j)
+;   ;   ;   )
+;   ;   ; )
 ;   )
-; )
+;   (println indicies)
+; ))
+; (assert (= [0 1] (findPair (buildMap [3 2 1]) 4)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; Different approach to findPair
+; =============================================
+; {3 0, 2 1, 1 2}
+; (defn findPair [myHash sumVal] (
+;   (def myHashKeys (keys myHash))
+;   ; (println myHashKeys)
+;   ; (def opposites [])
+;   (def indicies [])
+;   (def j 0)
+;   (println (count myHashKeys))
+;   (for [[key val] {3 0, 2 1, 1 2}
+;     :when (= val 0)]
+;       (do 
+;         (println key)
+;         (println "found it")
+;       ) 
+;   )
+;   (println "done")
+;   (println "test")
+    
+;   ;   (println j)
+    
+;     ; (println (nth myHashKeys j))
+;   ;   ; (do 
+;   ;   ;   (def currentHashKey (get myHashKeys j))
+;   ;   ;   (def currentHashIndex (get myHash currentHashKey))
+;   ;   ;   (def opposite (- sumVal currentHashIndex))
+;   ;   ;   (println opposite)
+;   ;   ;   (if (get myHash opposite) 
+;   ;   ;     (do 
+;   ;   ;       (def indexTwo (get myHash opposite))
+;   ;   ;       ( def indicies (conj indicies currentHashIndex))
+;   ;   ;       ( def indicies (conj indicies indexTwo))
+;   ;   ;     ) 
+;   ;   ;     ; (recur inc j)
+;   ;   ;     (inc j)
+;   ;   ;   )
+;   ;   ; )
+;   ; )
+;   (println indicies)
+; ))
+; (assert (= [0 1] (findPair (buildMap [3 2 1]) 4)))
+
+
+
+
+
+
+
+
+
+
+
+(defn twoSum [vec sumValue] (
+  (def myHash (buildMap vec))
+  (findPair myHash sumValue)
+))
 ; (assert (= [0 1] (twoSum [3 2 1] 4)))
 
-; (def myVec [1 2 3 4 5 6 7 8 9])
-; (def sumVal 10)
-; (twoSum myVec sumVal)
+(def myVec [3 2 1])
+(def sumVal 4)
+(twoSum myVec sumVal)
 
 
 
 
 
 
+
+
+
+
+(defn randomizeArray [arr] (
+
+  ; (def newArray [])
+  ; (def elements {})
+  ( loop [i 0]
+    (if (i = 4)
+      (println "4")
+      (recur 
+        (println i)
+        (inc i)
+      )
+    )
+  )
+))
+(randomizeArray [1 2 3 4])
