@@ -17,6 +17,7 @@ This is a simple hello world programm.
 7. Floating Point - These differ from integers in that they can hold decimal values. ex: 1.2 3.5
 ## Operators
 1. '+' (plus) - Adds multiple numbers.
+
 ```;: will evaluate to 3
 (+ 1 2 )
 ;; will evaluate to 6
