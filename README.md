@@ -4,9 +4,11 @@
 
 ## Hello world
 This is a simple hello world programm.
+
 `(defn hello-world "This is a simple hello world function that takes no parameters"
   [] 
   (println (str "Hello " "World")))`
+  
 ## Data types
 1. Integers - In clojure, Integers consist of Whole numbers. ex: 1 2 3 4.
 2. Boolean - Just like in other languages, Booleans are just True and False.
@@ -15,6 +17,7 @@ This is a simple hello world programm.
 5. Nil - This defines a non-exitent value such as NULL in other programming languages.
 6. Atom - This type is used for concurrent programming. They can only be modified by special functions that check that if its value was altered.
 7. Floating Point - These differ from integers in that they can hold decimal values. ex: 1.2 3.5
+
 ## Operators
 1. '+' (plus) - Adds multiple numbers.
 
@@ -88,16 +91,49 @@ This is a simple hello world programm.
 `
 4. loop - similar to a foor loop in other languages
 
-`
-`
 
 ## Conditionals
+1.if
+
+`(if (= 1 1)
+  (println "values equal to each other")
+  (println "values are not equal to each other"))
+  `
+  
+2.if-do - similar to above but can run multiple lines of code
+
+`(if (= 1 1)
+      (do(println "values equal to each other")
+         (println "true"))
+      (do(println "values are notequal to each other")
+         (println "false")))
+`
+
+3.case - similar to switch statements in other languages
+
+`
+ (def value 7) 
+   (case value 15 (println "x is 15")
+      99 (println "the value is 99")
+      (println "the value is not 15 or 99")))
+`
+
+4.cond - similar to if-else in other languages
+
+`
+(def value 15)
+   (cond
+      (= x 15) (println "value is 15")
+      (= x 99)(println "value is 99")
+      :else (println "value is not defined"))
+`
 
 ## Data Structrures
 1.List -
 2.Set -
 3.Vectors -
 4.Map -
-##Functions and Variables
+
+## Functions and Variables
 
 
