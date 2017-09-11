@@ -18,10 +18,10 @@ This is a simple hello world programm.
 ## Operators
 1. '+' (plus) - Adds multiple numbers.
 
-```;: will evaluate to 3
+`;: will evaluate to 3
 (+ 1 2 )
 ;; will evaluate to 6
-(+ 1 2 3)```
+(+ 1 2 3)`
 
 2. '-' (minus) - Subtract  multiple numbers.
 ```;: will evaluate to -1
@@ -30,7 +30,7 @@ This is a simple hello world programm.
 (- 10 2 3)```
 
 3. '*' (multiplication) - Multiplies multiple numbers.
-````;: will evaluate to 4
+```;: will evaluate to 4
 (* 2 2 )
 ;; will evaluate to 60
 (* 10 2 3)```
