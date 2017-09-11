@@ -21,36 +21,45 @@ This is a simple hello world programm.
 (+ 1 2 )
 ;; will evaluate to 6
 (+ 1 2 3)```
+
 2. '-' (minus) - Subtract  multiple numbers.
 ```;: will evaluate to -1
 (- 1 2 )
 ;; will evaluate to 5
 (- 10 2 3)```
+
 3. '*' (multiplication) - Multiplies multiple numbers.
 ````;: will evaluate to 4
 (* 2 2 )
 ;; will evaluate to 60
 (* 10 2 3)```
+
 4. '/' (division) - Divides multiple numbers.
 ```;: will evaluate to 5
 (/ 10 2 )
 ;; will evaluate to 1
 (- 10 2 5)```
+
 5. inc - Increase a value by one.
 ```;; Evaluate to 2
 (inc 1)```
+
 6. dec - Decrease a value by one.
 ```;; Evaluate to 0
 (dec 1)```
+
 7. max - return the largest value of the numbers passed in.
 ```;;returns 3
 (max 1 2 3)```
+
 7. min - return the smallest value of the numbers passed in.
 ```;;returns 1
 (min 100 22 39)```
+
 9. rem - evaluates to the remainder of diving multiple numbers
 ```;;evaluates to 1
 (rem 11 10)```
+
 ## Loops
 1. while-
 2. dotimes -
