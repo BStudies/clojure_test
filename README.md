@@ -16,15 +16,41 @@ This is a simple hello world programm.
 6. Atom - This type is used for concurrent programming. They can only be modified by special functions that check that if its value was altered.
 7. Floating Point - These differ from integers in that they can hold decimal values. ex: 1.2 3.5
 ## Operators
-1. + (plus)-
-2. - (minus)-
-3. * (multiplication)
-4. / (divisions)
-5. inc -
-6. dec - 
-7. max -
-8. min -
-9. rem -
+1. + (plus) - Adds multiple numbers.
+`;: will evaluate to 3
+(+ 1 2 )
+;; will evaluate to 6
+(+ 1 2 3)`
+2. - (minus) - Subtract  multiple numbers.
+`;: will evaluate to -1
+(- 1 2 )
+;; will evaluate to 5
+(- 10 2 3)`
+3. * (multiplication) - Multiplies multiple numbers.
+`;: will evaluate to 4
+(* 2 2 )
+;; will evaluate to 60
+(* 10 2 3)`
+4. / (division) - Divides multiple numbers.
+`;: will evaluate to 5
+(/ 10 2 )
+;; will evaluate to 1
+(- 10 2 5)`
+5. inc - Increase a value by one.
+`;; Evaluate to 2
+(inc 1)`
+6. dec - Decrease a value by one.
+`;; Evaluate to 0
+(dec 1)`
+7. max - return the largest value of the numbers passed in.
+`;;returns 3
+(max 1 2 3)`
+7. min - return the smallest value of the numbers passed in.
+`;;returns 1
+(min 100 22 39)`
+9. rem - evaluates to the remainder of diving multiple numbers
+`;;evaluates to 1
+(rem 11 10)`
 ## Loops
 1. while-
 2. dotimes -
