@@ -129,10 +129,25 @@ This is a simple hello world programm.
 `
 
 ## Data Structrures
-1.List -
-2.Set -
-3.Vectors -
-4.Map -
+1.List - A list is used to store many values.
+
+`(def a (list 1 2 3 3))
+;;(1 2 3)`
+2.Set - A set stores unique values from a list.
+
+`(set a)
+;;#{1 2 3 4}`
+3.Vectors - similar to arrays in that indexes are contiguous.
+
+`(vector 1 2 3)
+;; [1 2 3]`
+
+4.Map - it is used to store key value pairs
+
+`
+(hash-map "one" "1" "two" "2" "three" "3")
+;;{"three" "3", "two" "2", "one" "1"}
+`
 
 ## Functions and Variables
 
